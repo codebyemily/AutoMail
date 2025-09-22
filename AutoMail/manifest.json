@@ -1,0 +1,42 @@
+{
+  "name": "AutoMail",
+  "version": "1.0",
+  "description": "Your personal Gmail Assistant",
+  "key": "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCyDdNNYWhbtCSjoxsDK1F9nLgxdalKCZuiXxfeM9cMvh7HWFIVq62oUMhOZVuq9hYX3BcEBoTQUSGopZoEPSEhd0f3OsyBWm8Zz1uYuaKYEeEVVXIxtEfIzjh6/qgx9QUH3DEOiB1BhlXFrEOYaXgs5qEwTGCxOtZmrQuw9h+ZMVUkoJKmW2N09Kw1yjNcHesBSThsxtXnpCbBV7ec3CnfFjzs8uemGTeitiYTfRo5WL7wR7KJrAHz44PvFTW7fQyhAp+7sVp+drWo9XKSnMMyjxN8h4/d8DX2AMjlKlr8b0CbiS8Vaf3gUWjR+LsIYRGuYXkZD1/WKhTPp/y2PNtzAgMBAAECggEAVcNBByGnEZzIlSVIKpOf8eAd/HzPKQFNvL0PExFnQRUGYECTcSq7P7qBcPlzWPqlk6KIV4EIUgryKnhxoh8LqUH6IQRqYtf7cbQmS38G6TabcxowIe7TMM7b96pXu5BoduvBmV1IsjoRcGBUQsJyhzYjZ88yN8u+X8B0RC2Y9ME1VqgTvmEA5snuZHlZQyt58+SwjMYQ84lsHZ5ndZW4BDNUnfetMTDjP0/vfRST/0nhy7fnKcvaEGDuuY0RmZP5Ws0LjI3hqzSlOZ55zWysUNSUi+56zZvsCJiWBcdhIWY8pICYWo/gN+8otEv7tjhncxHGmLk37d227/6nmUH92QKBgQD4bOAidLwTaMyyB6Q3b1dTslskIZFPGwHYt5cZ8D/2HAR7IjxtfSlrAp1T59x8C/oR6Q4U8P27gSz6uLR160CRFWiFOTZtoy1aWt+koQ5y3CQqLyuTyhGeQq+vx98+nbHf9bpS/w18AU8fLTPr26NPx/7L8ruZBiCZjRD0MN+k3wKBgQC3e6e7lhqecit8wHdgIfg4vNospMB054XZwJUIl9TiZc36MVCVzpwemNIv0k5mmBxzfBrhc/fGXG+EqK+yQb5aOWgUcmUkApus0moFSQP65b3nPwugoauiR4qfoK0LcmUP6to26kRRWBFoOteK7gDeP2ufxdCWl2ryJKC4OBTn7QKBgD3b5ofN55Mxsl7WVkbTe7xEmjtJ/IPlJrWPKZn04Ahpe5gps0BUPT7/PKvK/XUKCm/xR2dhhtzs0oVv/seqF77IxOj/kRUF3+Iy5KN60z04oey7KC+5zl9JHbQ4oddWrxckegv2pKXvMYOC3v3pCCZyl3izbZEyHGX/4Wvcy6OjAoGBAJ4fm9LGrlQEMkQFnhsjy0YiQqecqBtXd3vMQuOv7Y/aimNmYntoHhUkQGdkB5rU1hgUSRoolczF1nlt4lRt4fzhYjfUyiL5eG28vA+n+B0eJsWGCKA7E637l5SvpNGrmTrZe4s94vhzPDUmGKErMWZXI4oCsRtGjKz3MebwtduVAoGBAIEXJzNq4MewhEAdDjn66Oe+qoYXEwIaTx1Lbdc4UZ78tzMcYr7VnbvWr0gdIE9uDPMTNIIVFNtXquYYFchnRtk9f6ApEv86DyIwq/P5KzgKyaX5mDvN0vv2IW5gvVuCV2jntgPYJF9b1GUSjdTGech4lYA2YKHp90R5FPwlNRSu",
+
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "FriendBlock, friends face's in a block."
+  }, 
+  "oauth2": {
+    "client_id": "1043288152858-hji195h389k1mmojbrne9h86of4685bi.apps.googleusercontent.com",
+     "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly",
+      "https://mail.google.com/",
+      "openid",
+      "email",
+      "profile"
+    ]
+  },
+   "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+   "permissions": [
+    "identity",
+    "identity.email",
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+
+
+  "host_permissions": [
+    "*://*.google.com/*"
+  ]
+ 
+}

@@ -1,0 +1,95 @@
+/* popup.css */
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6f9;
+  color: #202124;
+  width: 320px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+  align-items: center;
+  
+}
+
+.container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 16px;
+  margin: 12px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a73e8;
+  margin: 0;
+}
+
+#userPrompt {
+  width: 100%;
+  height: 90px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  resize: none;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    
+}
+
+#userPrompt:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.15);
+}
+
+#loginBtn {
+  display: block;
+  width: 100%;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+#loginBtn:hover {
+  background-color: #1669c1;
+}
+
+#loginBtn:active {
+  transform: scale(0.98);
+}
+
+#response {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  min-height: 50px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333;
+  white-space: pre-wrap;
+}
